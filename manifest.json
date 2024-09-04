@@ -4,7 +4,8 @@
     "description": "Reveals the exact date and time a photo or comment was posted on Instagram",
     "version": "1.0",
     "action": {
-      "default_popup": "instapostdate.html"
+      "default_popup": "instapostdate.html",
+      "default_icon": "images/instapostdate_icon.png"
     },
     "content_scripts": [
       {
