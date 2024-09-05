@@ -2,7 +2,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
     processTimeElements();
 });
 
-// Fungsi untuk mengonversi datetime ke format local date
 function convertToLocalDate(element) {
     const dateTimeValue = element.getAttribute('datetime');
     const localDate = new Date(dateTimeValue);
@@ -19,7 +18,6 @@ function convertToLocalDate(element) {
     element.setAttribute('title', formattedDate);
 }
 
-// Fungsi untuk memproses semua elemen <time>
 function processTimeElements() {
     const timeElements = document.querySelectorAll('time');
     timeElements.forEach((timeElement) => {
@@ -27,7 +25,6 @@ function processTimeElements() {
     });
 }
 
-// Memantau perubahan pada body atau elemen yang relevan
 const observer = new MutationObserver((mutations) => {
     mutations.forEach((mutation) => {
         if (mutation.type === 'childList' || mutation.type === 'subtree') {
@@ -36,7 +33,6 @@ const observer = new MutationObserver((mutations) => {
     });
 });
 
-// Konfigurasi MutationObserver
 observer.observe(document.body, {
     childList: true,
     subtree: true,
